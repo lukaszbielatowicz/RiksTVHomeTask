@@ -1,0 +1,14 @@
+RiksTV_HomeTask/packages/
+RiksTV_HomeTask/.vs/RiksTV_HomeTask/v14/.suo
+RiksTV_HomeTask/RiksTV.HomeTaskApplication/obj/
+RiksTV_HomeTask/RiksTV.HomeTaskApplication/bin/
+RiksTV_HomeTask/RiksTV.HomeTaskApplication.Tests/obj/
+RiksTV_HomeTask/RiksTV.HomeTaskApplication.Tests/bin/
+RiksTV_HomeTask/RiksTV.Lib.SimpleCacheProvider/obj/
+RiksTV_HomeTask/RiksTV.Lib.SimpleCacheProvider/bin/
+RiksTV_HomeTask/RiksTV.Lib.GooglePlacesProvider/obj/
+RiksTV_HomeTask/RiksTV.Lib.GooglePlacesProvider/bin/
+RiksTV_HomeTask/RiksTV.HomeTaskApplication.CacheProviderInterface/obj/
+RiksTV_HomeTask/RiksTV.HomeTaskApplication.CacheProviderInterface/bin/
+RiksTV_HomeTask/RiksTV.HomeTaskApplication.PlacesProviderInterface/obj/
+RiksTV_HomeTask/RiksTV.HomeTaskApplication.PlacesProviderInterface/bin/
