@@ -36,7 +36,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -103,9 +103,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RiksTV.HomeTaskApplication.CacheProviderInterface\RiksTV.HomeTaskApplication.CacheProviderInterface.csproj">
+      <Project>{763ec801-18e5-4f13-8e8c-e434d9251228}</Project>
+      <Name>RiksTV.HomeTaskApplication.CacheProviderInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RiksTV.HomeTaskApplication.PlacesProviderInterface\RiksTV.HomeTaskApplication.PlacesProviderInterface.csproj">
+      <Project>{076de405-d7cd-451e-a17b-af0702961355}</Project>
+      <Name>RiksTV.HomeTaskApplication.PlacesProviderInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RiksTV.HomeTaskApplication\RiksTV.HomeTaskApplication.csproj">
       <Project>{F615E075-6F57-4548-A776-A07D3F7AEF6A}</Project>
       <Name>RiksTV.HomeTaskApplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RiksTV.Lib.GooglePlacesProvider\RiksTV.Lib.GooglePlacesProvider.csproj">
+      <Project>{c42b303e-069e-4189-a152-ed22ebe47780}</Project>
+      <Name>RiksTV.Lib.GooglePlacesProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RiksTV.Lib.SimpleCacheProvider\RiksTV.Lib.SimpleCacheProvider.csproj">
+      <Project>{b9f1b002-e9f2-4524-8095-4b35deda1cc6}</Project>
+      <Name>RiksTV.Lib.SimpleCacheProvider</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
