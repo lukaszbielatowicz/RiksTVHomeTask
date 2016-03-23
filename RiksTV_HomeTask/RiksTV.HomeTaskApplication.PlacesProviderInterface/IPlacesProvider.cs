@@ -2,33 +2,30 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using Model;
-    using Request;
-    using Response;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    using RiksTV.HomeTaskApplication.PlacesProviderInterface.Model;
+    using RiksTV.HomeTaskApplication.PlacesProviderInterface.Request;
+    using RiksTV.HomeTaskApplication.PlacesProviderInterface.Response;
+
+    /// <summary> </summary>
     public interface IPlacesProvider
     {
-        /// <summary>
-        /// Gets the place details.
-        /// </summary>
-        /// <param name="identNo">The ident no.</param>
-        /// <returns></returns>
-        Task<GetPlaceDetailsResponse> GetPlaceDetails(string identNo);
+        #region Public Methods and Operators
 
-        /// <summary>
-        /// Searches the places.
-        /// </summary>
-        /// <param name="query">The query.</param>
-        /// <returns></returns>
+        /// <summary> Gets the place details. </summary>
+        /// <param name="request"> The request. </param>
+        /// <returns> </returns>
+        Task<GetPlaceDetailsResponse> GetPlaceDetails(GetPlaceDetailsRequest request);
+
+        /// <summary> Gets the place types. </summary>
+        /// <returns> </returns>
+        IEnumerable<PlaceType> GetPlaceTypes();
+
+        /// <summary> Searches the places. </summary>
+        /// <param name="query"> The query. </param>
+        /// <returns> </returns>
         Task<IEnumerable<SearchPlacesResponse>> SearchPlaces(SearchPlacesRequest query);
 
-        /// <summary>
-        /// Gets the place types.
-        /// </summary>
-        /// <returns></returns>
-        IEnumerable<PlaceType> GetPlaceTypes();
+        #endregion
     }
 }

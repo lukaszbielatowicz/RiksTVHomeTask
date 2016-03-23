@@ -2,9 +2,6 @@
 {
     using System.Collections.Generic;
 
-    /// <summary>
-    /// 
-    /// </summary>
     public class SearchPlacesRequest
     {
         public int RadiusKm { get; set; }

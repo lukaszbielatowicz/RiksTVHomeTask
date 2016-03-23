@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(RiksTV.HomeTaskApplication.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(RiksTV.HomeTaskApplication.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(RiksTV.HomeTaskApplication.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(RiksTV.HomeTaskApplication.App_Start.NinjectWebCommon), "Stop")]
 
-namespace RiksTV.HomeTaskApplication
+namespace RiksTV.HomeTaskApplication.App_Start
 {
     using System;
     using System.Web;
@@ -11,9 +11,11 @@ namespace RiksTV.HomeTaskApplication
     using Ninject;
     using Ninject.Web.Common;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    using RiksTV.HomeTaskApplication.CacheProviderInterface;
+    using RiksTV.HomeTaskApplication.PlacesProviderInterface;
+    using RiksTV.Lib.GooglePlacesProvider;
+    using RiksTV.Lib.SimpleCacheProvider;
+
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -64,6 +66,8 @@ namespace RiksTV.HomeTaskApplication
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IPlacesProvider>().To<PlacesProvider>();
+            kernel.Bind<ICacheOperation>().To<SimpleCache>();
         }        
     }
 }

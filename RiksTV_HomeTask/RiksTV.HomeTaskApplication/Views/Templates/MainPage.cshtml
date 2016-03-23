@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="col-md-5">
+        <div class="col-md-5">
+            <div class="row"><!--TODO - move to directive-->
+                <ui-select ng-model="placeType.selected" theme="select2" style="width: 90%" on-select="selectPlace($item)">
+                    <ui-select-match placeholder="select place to search">{{$select.selected.DisplayName}}</ui-select-match>
+                    <ui-select-choices repeat="item in placeType.places | filter: $select.search">
+                        <div ng-bind-html="item.DisplayName | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="row">Radius</div>
+            <div class="row">Search Keywords</div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="row">Location Type Selector</div>
+        <div class="row">Input Location</div>
+    </div>
+    <div class="col-md-2">Search Button</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        RESULTS TABLE - GRID
+    </div>
+</div>

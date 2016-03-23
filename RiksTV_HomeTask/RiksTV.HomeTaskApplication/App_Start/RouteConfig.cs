@@ -11,9 +11,21 @@ namespace RiksTV.HomeTaskApplication {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "DirectiveTemplate",
+                url: "template/{action}",
+                defaults: new { controller = "Directives", action = "Index" }
+            );
+
+            routes.MapRoute(
+                name: "Template",
+                url: "view/{action}",
+                defaults: new { controller = "Templates", action = "Index" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{*url}",
+                defaults: new { controller = "Home", action = "Index" }
             );
         }
     }

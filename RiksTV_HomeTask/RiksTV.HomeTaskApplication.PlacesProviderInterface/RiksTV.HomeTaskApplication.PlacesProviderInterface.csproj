@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IPlacesProvider.cs" />
     <Compile Include="Model\LocationData.cs" />
+    <Compile Include="Request\GetPlaceDetailsRequest.cs" />
     <Compile Include="Response\GetPlaceDetailsResponse.cs" />
     <Compile Include="Response\SearchPlacesResponse.cs" />
     <Compile Include="Model\PlaceType.cs" />
